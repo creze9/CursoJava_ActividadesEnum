@@ -1,0 +1,33 @@
+package enumejercicio1;
+
+import java.util.Scanner;
+
+public class PruebasSemaforo {
+	
+	static Scanner entrada = new Scanner(System.in);
+	
+	public static void main(String[] args) {
+		System.out.println("Indica el color del semaforo que quieres empezar: ");
+		String color = entrada.nextLine(); 
+		color = color.toUpperCase();
+		ColorSemaforo colores = ColorSemaforo.valueOf(color);
+		
+		Semaforo s1 = new Semaforo(colores);
+		s1.cambiarColor();
+		s1.imprimirEstadoActual();
+	
+		while(true) {
+			s1.cambiarColor();
+			s1.imprimirEstadoActual();
+			
+			try {
+				Thread.sleep(2000);
+				
+			}catch (InterruptedException e) {
+				
+			}
+		}
+	}
+	
+
+}
