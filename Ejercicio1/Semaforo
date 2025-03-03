@@ -1,0 +1,32 @@
+package enumejercicio1;
+
+public class Semaforo {
+	private ColorSemaforo colorSemaforo;
+
+	
+	
+	public Semaforo(ColorSemaforo colorSemaforo) {
+		this.colorSemaforo = colorSemaforo;
+	}
+
+	public void cambiarColor() {
+		switch (colorSemaforo) {
+		case AMARILLO:
+			this.colorSemaforo= ColorSemaforo.ROJO;
+			break;
+		case ROJO:
+			this.colorSemaforo= ColorSemaforo.VERDE;
+			break;
+		case VERDE:
+			this.colorSemaforo=ColorSemaforo.AMARILLO;
+			break;
+		}
+		
+		
+	}
+	
+	public void imprimirEstadoActual() {
+		System.out.println(colorSemaforo);
+		
+	}
+}
