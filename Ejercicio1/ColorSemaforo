@@ -1,0 +1,6 @@
+package enumejercicio1;
+
+public enum ColorSemaforo {
+	ROJO, AMARILLO, VERDE;
+
+}
